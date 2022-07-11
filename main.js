@@ -34,6 +34,15 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
+//스크롤을 내릴 때 Home부분이 점점 투명해지도록
+const home = document.querySelector('.home__container'); //배경화면은 그대로, 안에 있는 콘텐츠만 투명해지게
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  console.log(homeHeight);
+  //만약 window.scrollY가 0이고, homeHeight이 800이면 0/800=0,, 1-0=1(불투명)
+  home.style.opacity = 1 - window.scrollY / homeHeight; //불투명:1 ,점점 투명:0.5, 투명:0
+});
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
