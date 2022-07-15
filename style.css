@@ -63,6 +63,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0; /*아이폰 사용자는 필수!!*/
 }
 
 /* Typography */
