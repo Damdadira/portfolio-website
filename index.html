@@ -25,12 +25,8 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <!--Navbar->맨위에 상단바?같은 부분(옆에 화살표 눌러서 펼쳐보면 코딩 있음) -->
+    <!--Navbar -->
     <nav id="navbar">
-      <div class="navbar__logo">
-        <i class="fa-solid fa-paw"></i>
-        <a href="#">YOUNG</a>
-      </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item active" data-link="#home">Home</li>
         <li class="navbar__menu__item" data-link="#about">About</li>
@@ -52,13 +48,21 @@
     <section id="home">
       <div class="home__container">
         <img
-          src="imgs/profile.jpg"
+          src="imgs/avatar.jpg"
           alt="YA profile photo"
           class="home__avatar"
         />
-        <h1 class="home__title">Hello, <br />I'm YOUNG A</h1>
-        <h2 class="home__description">My major is Computer Department.</h2>
-        <button class="home__contact">Contact Me</button>
+        <div class="home_desc_container">
+          <h1 class="home__title">Hello,
+          <h2 class="home__description">I'm a Frontend Developer</h2>
+        </div>
+        <button class="cta home__contact">
+          <span>Contact Me</span>
+          <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg>
+        </button>
       </div>
     </section>
 
@@ -74,24 +78,21 @@
       <div class="about__majors">
         <div class="major">
           <div class="major__icon">
-            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-react"></i>
           </div>
           <h2 class="major__title">Front-end</h2>
-          <p class="major__description">HTML, CSS, JavaScript</p>
         </div>
         <div class="major">
           <div class="major__icon">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-server"></i>
           </div>
-          <h2 class="major__title">Adobe</h2>
-          <p class="major__description">Photoshop</p>
+          <h2 class="major__title">Back-end</h2>
         </div>
         <div class="major">
           <div class="major__icon">
-            <i class="fa-solid fa-file-word"></i>
+            <i class="fa-solid fa-database"></i>
           </div>
-          <h2 class="major__title">microsoft</h2>
-          <p class="major__description">Word, Excel, Powerpoint, Access</p>
+          <h2 class="major__title">DataBase</h2>
         </div>
       </div>
       <div class="about__schools">
@@ -116,28 +117,21 @@
     <section id="skills" class="section">
       <div class="section__container">
         <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-          Experience with all phases of the software life-cycle. Passion for
-          learning new technologies. Capable of working within a team
-          environment and independently. Ability to plan and time schedule, work
-          under strict time pressure and adapt quickly when needed.
-        </p>
         <div class="skillset">
           <div class="skillset__left">
             <h3 class="skillset__title">Skills</h3>
             <div class="skill">
               <div class="skill__description">
-                <span>HTML, CSS</span>
-                <span>90%</span>
+                <span>HTML, CSS, JavaScript</span>
+                <span>100%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 90%"></div>
+                <div class="skill__value" style="width: 100%"></div>
               </div>
             </div>
             <div class="skill">
               <div class="skill__description">
-                <span>JavaScript</span>
+                <span>React</span>
                 <span>70%</span>
               </div>
               <div class="skill__bar">
@@ -146,20 +140,20 @@
             </div>
             <div class="skill">
               <div class="skill__description">
-                <span>Word, Excel, Powerpoint, Access</span>
-                <span>90%</span>
+                <span>C#, ASP.NET</span>
+                <span>60%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 90%"></div>
+                <div class="skill__value" style="width: 60%"></div>
               </div>
             </div>
             <div class="skill">
               <div class="skill__description">
-                <span>Photoshop</span>
-                <span>80%</span>
+                <span>MySQL, Oracle, PostgreSQL, MongoDB</span>
+                <span>70%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value" style="width: 80%"></div>
+                <div class="skill__value" style="width: 70%"></div>
               </div>
             </div>
           </div>
@@ -168,14 +162,17 @@
               <h3 class="skillset__title">Tools</h3>
               <ul class="tools__list">
                 <li><span>Visual Studio Code</span></li>
-                <li><span>python</span></li>
-                <li><span>C++</span></li>
+                <li><span>Visual Studio</span></li>
+                <li><span>Eclipse</span></li>
+                <li><span>DBeaver</span></li>
               </ul>
             </div>
             <div class="etc">
               <h3 class="skillset__title">Etc</h3>
               <ul class="etc__list">
-                <li><span>GitHub</span></li>
+                <li><span>Git(GitHub, GitLab)</span></li>
+                <li><span>Figma</span></li>
+                <li><span>Notion</span></li>
                 <li><span>Slack</span></li>
               </ul>
             </div>
@@ -365,7 +362,7 @@
     <!-- Contact -->
     <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
-      <h2 class="contact__email">damdadira@gmail.com</h2>
+      <h2 class="contact__email">suk971029@gmail.com</h2>
       <div class="contact__links">
         <a href="https://github.com/Damdadira" target="_blank">
           <i class="fa-solid fa-dog"></i>
@@ -379,7 +376,11 @@
 
     <!-- Arrow up -->
     <button class="arrow-up">
-      <i class="fa-solid fa-arrow-up"></i>
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+        ></path>
+      </svg>
     </button>
   </body>
 </html>
