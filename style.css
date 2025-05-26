@@ -127,7 +127,7 @@ p {
   color: var(--color-dark-blue);
   line-height: 2;
   position: relative;
-  padding: 2px 12px;
+  padding: 2px 28px;
   cursor: pointer;
 }
 
@@ -187,7 +187,7 @@ p {
   color: var(--color-light-blue);
 }
 
-.cta {
+.home__contact {
   position: relative;
   margin: auto;
   padding: 9px 18px;
@@ -197,7 +197,7 @@ p {
   cursor: pointer;
 }
 
-.cta:before {
+.home__contact:before {
   content: "";
   position: absolute;
   top: 0;
@@ -210,7 +210,7 @@ p {
   transition: all 0.3s ease;
 }
 
-.cta span {
+.home__contact span {
   position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
@@ -219,7 +219,7 @@ p {
   color: var(--color-dark-blue);
 }
 
-.cta svg {
+.home__contact svg {
   position: relative;
   top: 0;
   margin-left: 10px;
@@ -232,16 +232,16 @@ p {
   transition: all 0.3s ease;
 }
 
-.cta:hover:before {
+.home__contact:hover:before {
   width: 100%;
   background: #b1dae7;
 }
 
-.cta:hover svg {
+.home__contact:hover svg {
   transform: translateX(0);
 }
 
-.cta:active {
+.home__contact:active {
   transform: scale(0.95);
 }
 
@@ -294,28 +294,58 @@ p {
   font-size: var(--font-small);
 }
 
-.school {
+.about__experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience {
   display: flex;
   align-items: center;
   color: var(--color-dark-grey);
+  gap: 1.5rem;
 }
 
-.school__description {
-  margin: 0 16px;
+.experience_logos {
+  width: 100px;
+}
+
+.university_logo {
+  width: 90px;
+  height: 40px;
+}
+
+.scatterx__logo {
+  width: 80px;
+  height: 15px;
+}
+
+.experience__description {
   text-align: left;
 }
 
-.school__name,
-.school__period {
+.experience__name,
+.experience__period {
   color: var(--color-light-grey);
 }
 
-.school__name {
+.experience__name {
   font-size: var(--font-small);
 }
 
-.school__period {
+.experience__name span{
+  font-weight: 500;
+}
+
+.experience__period {
   font-size: var(--font-micro);
+}
+
+.company_container {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
 }
 
 /* Skill */
@@ -534,7 +564,7 @@ p {
 .contact__title,
 .contact__email,
 .contact__rights {
-  color: var(--color-white);
+  color: var(--color-dark-blue);
 }
 
 .contact__title {
@@ -551,6 +581,105 @@ p {
   color: var(--color-dark-blue);
   transition: all var(--animation-duration) ease-in;
 }
+
+.social-login-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+}
+.social-login-icons svg {
+  width: 40px;
+}
+
+.social-icon-1,
+.social-icon-1-1,
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 20px 0 0px 0;
+}
+
+.icon svg {
+  fill: #111;
+}
+
+.socialcontainer {
+  height: 80px;
+  overflow: hidden;
+}
+.social-icon-1 {
+  transition-duration: 0.4s;
+  background-color: rgb(0, 0, 0);
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+}
+.social-icon-1 svg,
+.social-icon-2 svg,
+.social-icon-3 svg,
+.social-icon-4 svg {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0.2s;
+}
+.social-icon-1-1 {
+  transition-duration: 0.4s;
+  background-color: rgb(0, 0, 0, 0);
+}
+.socialcontainer:hover .social-icon-1 {
+  transform: translateY(-70px);
+}
+.socialcontainer:hover .social-icon-1 svg,
+.socialcontainer:hover .social-icon-2 svg,
+.socialcontainer:hover .social-icon-3 svg,
+.socialcontainer:hover .social-icon-4 svg {
+  opacity: 1;
+}
+.social-icon-2 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: linear-gradient(
+    72.44deg,
+    #ff7a00 11.92%,
+    #ff0169 51.56%,
+    #d300c5 85.69%
+  );
+}
+.socialcontainer:hover .social-icon-2 {
+  transform: translateY(-70px);
+}
+.social-icon-3 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: #316ff6;
+}
+
+.socialcontainer:hover .social-icon-3 {
+  transform: translateY(-70px);
+}
+.social-icon-4 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+
+  background: linear-gradient(
+    180deg,
+    rgba(129, 34, 144, 1) 0%,
+    rgba(77, 34, 124, 1) 91%
+  );
+}
+
+.socialcontainer:hover .social-icon-4 {
+  transform: translateY(-70px);
+}
+
 
 /* Scroll */
 .arrow-up {
