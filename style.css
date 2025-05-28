@@ -12,7 +12,7 @@
   --color-dark-blue: #234567;
   --color-blue: #bfe1ec;
   --color-light-blue: #98c0db;
-  --color-yellow: #fff7d1;
+  --color-light-orange: #fffbea;
   --color-orange: #feb546;
   --color-black: #000000;
 
@@ -64,7 +64,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  padding: 0; /*아이폰 사용자는 필수!!*/
+  padding: 0; 
 }
 
 /* Typography */
@@ -350,58 +350,176 @@ p {
 
 /* Skill */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-orange);
 }
 
 .skillset {
-  display: flex;
-  background-color: var(--color-light-grey);
-  color: var(--color-light-white);
-  margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin: 40px 0;
 }
 
-.skillset__title {
-  color: var(--color-white);
-  padding-bottom: 12px;
+.skillset__card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.skillset__left {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  flex-basis: 60%;
-  background-color: var(--color-dark-grey);
-  padding: 20px 40px;
+.skillset__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.skillset__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.skill__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.skill__name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.skill__percentage {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a3b658;
+    background: rgba(189, 216, 116, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.progress__container {
+    margin-bottom: 15px;
+}
+
+.progress__bar {
+    height: 6px;
+    background: rgba(116, 185, 216, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress__fill {
+    height: 100%;
+    background: linear-gradient(90deg, #dcec9f, #a8c8ec ,#74b9d8 );
+    border-radius: 10px;
+    transition: width 1.5s ease-out;
+    position: relative;
 }
 
 .skill__description {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 5px;
+    font-size: 0.95rem;
+    color: #5a6c7d;
+    line-height: 1.5;
 }
 
-.skill__bar {
-  width: 100%;
-  height: 5px;
-  background-color: var(--color-grey);
+.tools__section {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 50px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
-.skill__value {
-  height: 5px;
-  background-color: var(--color-orange);
+.tools__title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
 }
 
-.skillset__right {
-  flex-basis: 40%;
+.tools__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
 }
 
-.tools {
-  background-color: var(--color-grey);
+.tool__category {
+    text-align: center;
 }
 
-.tools,
-.etc {
-  padding: 20px;
+.category__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: rgba(189, 216, 116, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(178, 216, 116, 0.2);
+    transition: all 0.3s ease;
+}
+
+.category__icon:hover {
+    background: rgba(201, 216, 116, 0.2);
+    border-color: rgba(201, 216, 116, 0.4);
+    transform: scale(1.05);
+}
+
+.category__icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #a3b658;
+    fill: none;
+    stroke-width: 1.5;
+}
+
+.category__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.tool__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tool__tag {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(194, 216, 116, 0.3);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #777d5a;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tool__tag:hover {
+    background: rgba(181, 216, 116, 0.1);
+    border-color: rgba(194, 216, 116, 0.5);
+    color: #45502c;
+    transform: translateY(-2px);
 }
 
 /* Work */

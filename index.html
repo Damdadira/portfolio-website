@@ -128,66 +128,111 @@
     <section id="skills" class="section">
       <div class="section__container">
         <h1>Skills</h1>
+
         <div class="skillset">
-          <div class="skillset__left">
-            <h3 class="skillset__title">Skills</h3>
-            <div class="skill">
-              <div class="skill__description">
-                <span>HTML, CSS, JavaScript</span>
-                <span>100%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 100%"></div>
-              </div>
+            <div class="skillset__card">
+                <div class="skill__header">
+                    <span class="skill__name">HTML, CSS, JavaScript</span>
+                    <span class="skill__percentage">100%</span>
+                </div>
+                <div class="progress__container">
+                    <div class="progress__bar">
+                        <div class="progress__fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <p class="skill__description">Proficient in modern web technologies including ES6+, responsive design, and CSS frameworks.</p>
             </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>React</span>
-                <span>70%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 70%"></div>
-              </div>
+            
+            <div class="skillset__card">
+                <div class="skill__header">
+                    <span class="skill__name">React</span>
+                    <span class="skill__percentage">70%</span>
+                </div>
+                <div class="progress__container">
+                    <div class="progress__bar">
+                        <div class="progress__fill" style="width: 70%"></div>
+                    </div>
+                </div>
+                <p class="skill__description">Experience with React hooks, state management, and component-based architecture.</p>
             </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>C#, ASP.NET</span>
-                <span>60%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 60%"></div>
-              </div>
+            
+            <div class="skillset__card">
+                <div class="skill__header">
+                    <span class="skill__name">C#, ASP.NET</span>
+                    <span class="skill__percentage">60%</span>
+                </div>
+                <div class="progress__container">
+                    <div class="progress__bar">
+                        <div class="progress__fill" style="width: 60%"></div>
+                    </div>
+                </div>
+                <p class="skill__description">Backend development using .NET framework and c#.</p>
             </div>
-            <div class="skill">
-              <div class="skill__description">
-                <span>MySQL, Oracle, PostgreSQL, MongoDB</span>
-                <span>70%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 70%"></div>
-              </div>
+            
+            <div class="skillset__card">
+                <div class="skill__header">
+                    <span class="skill__name">Database Systems</span>
+                    <span class="skill__percentage">70%</span>
+                </div>
+                <div class="progress__container">
+                    <div class="progress__bar">
+                        <div class="progress__fill" style="width: 70%"></div>
+                    </div>
+                </div>
+                <p class="skill__description">MySQL, Oracle, PostgreSQL, MongoDB - Database design and optimization.</p>
             </div>
-          </div>
-          <div class="skillset__right">
-            <div class="tools">
-              <h3 class="skillset__title">Tools</h3>
-              <ul class="tools__list">
-                <li><span>Visual Studio Code</span></li>
-                <li><span>Visual Studio</span></li>
-                <li><span>Eclipse</span></li>
-                <li><span>DBeaver</span></li>
-              </ul>
+        </div>
+        
+        <div class="tools__section">
+            <h2 class="tools__title">Tools & Technologies</h2>
+            <div class="tools__grid">
+                <div class="tool__category">
+                    <div class="category__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="category__title">Development</h3>
+                    <div class="tool__list">
+                        <span class="tool__tag">Visual Studio Code</span>
+                        <span class="tool__tag">Visual Studio</span>
+                        <span class="tool__tag">Eclipse</span>
+                        <span class="tool__tag">DBeaver</span>
+                    </div>
+                </div>
+                
+                <div class="tool__category">
+                    <div class="category__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 21-3-3m0 0-3-3m3 3 3-3m-3 3-3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="category__title">Collaboration</h3>
+                    <div class="tool__list">
+                        <span class="tool__tag">Github</span>
+                        <span class="tool__tag">GitLab</span>
+                        <span class="tool__tag">Figma</span>
+                        <span class="tool__tag">Notion</span>
+                        <span class="tool__tag">Slack</span>
+                    </div>
+                </div>
+
+                <div class="tool__category">
+                    <div class="category__icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="9" cy="9" r="2"/>
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                        </svg>
+                    </div>
+                    <h3 class="category__title">Design</h3>
+                    <div class="tool__list">
+                        <span class="tool__tag">Photoshop</span>
+                    </div>
+                </div>
             </div>
-            <div class="etc">
-              <h3 class="skillset__title">Etc</h3>
-              <ul class="etc__list">
-                <li><span>Git(GitHub, GitLab)</span></li>
-                <li><span>Figma</span></li>
-                <li><span>Notion</span></li>
-                <li><span>Slack</span></li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </section>
