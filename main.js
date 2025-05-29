@@ -59,6 +59,47 @@ arrowUp.addEventListener('click', () => {
 });
 
 //projects
+const filterTabs = document.querySelectorAll('.filter-tab');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        filterTabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+            if (filter === 'all') {
+                card.style.display = 'block';
+            } else {
+                const categories = card.getAttribute('data-category');
+                if (categories && categories.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -70,11 +111,6 @@ workBtnContainer.addEventListener('click', (e) => {
 
   //이전에 선택된 아이템은 셀렉션을 없애고, 새롭게 선택된 아이템 선택
   const active = document.querySelector('.category__btn.selected');
-  // active.classList.remove('selected');
-  // const target = //아닌 경우(span인 경우)
-  //   e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-  // e.target.classList.add('selected');
-
   if (active != null) {
     active.classList.remove('selected');
   }
@@ -114,8 +150,6 @@ const sections = sectionIds.map((id) => document.querySelector(id)); //모든 se
 const navItems = sectionIds.map(
   (id) => document.querySelector(`[data-link="${id}"]`) //동일한 네비게이션 아이템 요소들을 섹션 navItems에 할당
 );
-// console.log(sections); ->값 확인용
-// console.log(navItems);
 
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
 //현재 선택된 메뉴 인덱스와 메뉴 요소들을 변수에 저장
@@ -143,10 +177,8 @@ const observerOptions = {
 //IntersectionObserver를 이용해서 섹션에 밖으로 나갈 때마다 그 다음에 해당하는 인덱스를 계산
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
-    // console.log(entry.target); ->값 확인용
     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
       const index = sectionIds.indexOf(`#${entry.target.id}`);
-      // console.log(index, entry.target.id); ->값 확인용
 
       //스크롤이 중간에 있다면
       //스크롤링이 아래로 되어서 페이지가 올라옴
