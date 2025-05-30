@@ -59,14 +59,12 @@ arrowUp.addEventListener('click', () => {
 });
 
 //projects
-const filterTabs = document.querySelectorAll('.filter-tab');
-const projectCards = document.querySelectorAll('.project-card');
+const filterTabs = document.querySelectorAll('.filter__tab');
+const projectCards = document.querySelectorAll('.project__card');
 
 filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        // Remove active class from all tabs
         filterTabs.forEach(t => t.classList.remove('active'));
-        // Add active class to clicked tab
         tab.classList.add('active');
 
         const filter = tab.getAttribute('data-filter');
@@ -84,50 +82,6 @@ filterTabs.forEach(tab => {
             }
         });
     });
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-
-  //이전에 선택된 아이템은 셀렉션을 없애고, 새롭게 선택된 아이템 선택
-  const active = document.querySelector('.category__btn.selected');
-  if (active != null) {
-    active.classList.remove('selected');
-  }
-  e.target.classList.add('selected');
-
-  projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    projects.forEach((project) => {
-      console.log(project.dataset.type);
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
 });
 
 /**
