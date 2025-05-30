@@ -118,7 +118,7 @@ p {
 }
 
 .menu__link {
-  color: #fff;
+  color: var(--color-white);
   line-height: 2;
   position: relative;
 }
@@ -671,7 +671,7 @@ p {
 .laptop__screen {
   width: 100px;
   height: 60px;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 4px;
   position: absolute;
   top: 8px;
@@ -692,9 +692,9 @@ p {
 .mobile__screen {
   width: 40px;
   height: 70px;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 8px;
-  position: absolute;
+  position: relative;
   top: 10px;
   left: 5px;
 }
@@ -764,47 +764,30 @@ p {
 /* Contact */
 #contact {
   background-color: var(--color-blue);
+  padding: 10px 20px 10px 20px;
 }
 
-.contact__title,
-.contact__email,
-.contact__rights {
-  color: var(--color-dark-blue);
-}
-
-.contact__title {
-  margin: 32px 0;
-}
-
-.contact__links {
-  font-size: var(--font-large);
-  margin: 24px 0;
-}
-
-.contact__links i:hover {
-  transform: scale(1.2);
-  color: var(--color-dark-blue);
-  transition: all var(--animation-duration) ease-in;
-}
-
-.social-login-icons {
+.social__login-icons {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 3rem;
+  margin-bottom: 6rem;
   -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
 }
-.social-login-icons svg {
+
+.social__login-icons svg {
   width: 40px;
 }
 
-.social-icon-1,
-.social-icon-1-1,
-.social-icon-2,
-.social-icon-2-2,
-.social-icon-3,
-.social-icon-3-3,
-.social-icon-4,
-.social-icon-4-4 {
+.social__icon-1,
+.social__icon-1-1,
+.social__icon-2,
+.social__icon-2-2,
+.social__icon-3,
+.social__icon-3-3,
+.social__icon-4,
+.social__icon-4-4 {
   width: 50px;
   height: 50px;
   display: flex;
@@ -814,41 +797,47 @@ p {
   margin: 20px 0 0px 0;
 }
 
-.icon svg {
+.social__icon svg {
   fill: #111;
 }
 
-.socialcontainer {
+.social__container {
   height: 80px;
   overflow: hidden;
 }
-.social-icon-1 {
+
+.social__icon-1 {
   transition-duration: 0.4s;
   background-color: rgb(0, 0, 0);
   transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
 }
-.social-icon-1 svg,
-.social-icon-2 svg,
-.social-icon-3 svg,
-.social-icon-4 svg {
+
+.social__icon-1 svg,
+.social__icon-2 svg,
+.social__icon-3 svg,
+.social__icon-4 svg {
   opacity: 0;
   transition-duration: 0.5s;
   transition-delay: 0.2s;
 }
-.social-icon-1-1 {
+
+.social__icon-1-1 {
   transition-duration: 0.4s;
   background-color: rgb(0, 0, 0, 0);
 }
-.socialcontainer:hover .social-icon-1 {
+
+.social__container:hover .social__icon-1 {
   transform: translateY(-70px);
 }
-.socialcontainer:hover .social-icon-1 svg,
-.socialcontainer:hover .social-icon-2 svg,
-.socialcontainer:hover .social-icon-3 svg,
-.socialcontainer:hover .social-icon-4 svg {
+
+.social__container:hover .social__icon-1 svg,
+.social__container:hover .social__icon-2 svg,
+.social__container:hover .social__icon-3 svg,
+.social__container:hover .social__icon-4 svg {
   opacity: 1;
 }
-.social-icon-2 {
+
+.social__icon-2 {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
   background: linear-gradient(
@@ -858,22 +847,24 @@ p {
     #d300c5 85.69%
   );
 }
-.socialcontainer:hover .social-icon-2 {
+
+.social__container:hover .social__icon-2 {
   transform: translateY(-70px);
 }
-.social-icon-3 {
+
+.social__icon-3 {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
   background: #316ff6;
 }
 
-.socialcontainer:hover .social-icon-3 {
+.social__container:hover .social__icon-3 {
   transform: translateY(-70px);
 }
-.social-icon-4 {
+
+.social__icon-4 {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
-
   background: linear-gradient(
     180deg,
     rgba(129, 34, 144, 1) 0%,
@@ -881,10 +872,15 @@ p {
   );
 }
 
-.socialcontainer:hover .social-icon-4 {
+.social__container:hover .social__icon-4 {
   transform: translateY(-70px);
 }
 
+.contact__rights {
+  color: var(--color-dark-blue);
+  text-align: center;
+  font-size: 1rem;
+}
 
 /* Scroll */
 .arrow-up {
