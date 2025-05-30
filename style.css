@@ -29,7 +29,7 @@
   --weight-regular: 400;
 
   /* Size */
-  --size-border-radius: 4px;
+  --size-border-radius: 20px;
 
   /* Animation */
   --animation-duration: 300ms;
@@ -265,24 +265,33 @@ p {
 }
 
 .major__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 170px;
-  line-height: 170px;
   font-size: 70px;
   color: var(--color-blue);
   margin: auto;
-  border: 1px solid var(--color-blue);
-  border-radius: 50%;
+  border: 2px solid var(--color-blue);
+  border-radius: var(--size-border-radius);
   margin-bottom: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .major__icon i {
   transition: all var(--animation-duration) ease;
 }
 
-.major__icon:hover i {
+.major__icon:hover {
+  animation: rotate624 0.7s ease-in-out both;
+  border: 2px solid var(--color-dark-blue);
+}
+
+.major__icon:hover i{
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
   color: var(--color-dark-blue);
-  transform: rotate(-30deg) scale(1.2);
 }
 
 .major__title,
@@ -345,7 +354,7 @@ p {
 .company_container {
   display: flex;
   flex-direction: column;
-  gap: .4rem;
+  gap: .3rem;
 }
 
 /* Skill */
@@ -363,7 +372,7 @@ p {
 .skillset__card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
-  border-radius: 20px;
+  border-radius: var(--size-border-radius);
   padding: 40px 35px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
@@ -406,7 +415,7 @@ p {
   color: #a3b658;
   background: rgba(189, 216, 116, 0.1);
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: var(--size-border-radius);
 }
 
 .progress__container {
@@ -508,7 +517,7 @@ p {
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(194, 216, 116, 0.3);
-  border-radius: 20px;
+  border-radius: var(--size-border-radius);
   font-size: 0.9rem;
   color: #777d5a;
   transition: all 0.3s ease;
@@ -696,42 +705,60 @@ p {
 }
 
 .testimonials {
-  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .testimonial {
   display: flex;
+  align-items: center;
   margin: 32px 0;
 }
 
 .testimonial__avator {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
+  border: 4px solid #999;
 }
 
-/* 홀수일 때 */
 .testimonial__avator:nth-child(odd) {
   margin-right: 40px;
 }
 
-/* 짝수일 때 */
 .testimonial__avator:nth-child(even) {
   margin-left: 40px;
 }
 
-.testimonial__speech-bublle {
+.testimonial__speech-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 18px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial__speech-bublle p {
+.testimonial__speech-bubble:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial__speech-bubble p {
   color: var(--color-light-grey);
+  text-align: left;
 }
 
-.testimonial__speech-bublle a {
+.testimonial__speech-bubble span {
   color: var(--color-pink);
+  font-weight: 500;
+}
+
+.testimonial__speech-bubble .speech-bubble-name {
+  text-align: right;
 }
 
 /* Contact */
@@ -999,13 +1026,11 @@ p {
 
   .testimonial__avator:nth-child(even),
   .testimonial__avator:nth-child(odd) {
-    /* 위에서 PC에서 해놓은 설정 없애기(짝수일 때 markgin:40px 이었음! */
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 25px;
   }
 
   .testimonial__speech-bublle {
-    /* 너는 아바타보다 항상 뒤에 나와야 해 */
     order: 1;
   }
 
@@ -1016,5 +1041,49 @@ p {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
+  }
+}
+
+@keyframes rotate624 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm1261 {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0) scale(1.2);
+  }
+
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0) scale(1.2);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0) scale(1.2);
+  }
+
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0) scale(1.2);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0) scale(1.2);
   }
 }
