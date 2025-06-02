@@ -3,6 +3,13 @@
 //navbar 투명하게 만들건데 올라가면 투명, 내려오면 색상 출력
 const navbar = document.querySelector('#navbar'); //CSS에서 불러오겠다 '#navbar라는 항목을'
 const navbarHeight = navbar.getBoundingClientRect().height;
+
+if (window.scrollY > navbarHeight) {
+  navbar.classList.add('navbar--dark');
+} else {
+  navbar.classList.remove('navbar--dark');
+}
+
 document.addEventListener('scroll', () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
@@ -61,7 +68,6 @@ arrowUp.addEventListener('click', () => {
 //projects
 const filterTabs = document.querySelectorAll('.filter__tab');
 const projectCards = document.querySelectorAll('.project__card');
-
 filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         filterTabs.forEach(t => t.classList.remove('active'));
@@ -84,11 +90,6 @@ filterTabs.forEach(tab => {
     });
 });
 
-/**
- * 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
- * 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
- * 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
- */
 
 // 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
 const sectionIds = [
@@ -166,3 +167,43 @@ window.addEventListener('wheel', () => {
   }
   selectNavItem(navItems[selectedNavIndex]);
 });
+
+//새로고침 했을 때 navbar 유지되도록
+window.addEventListener('load', () => {
+  let closestIndex = 0;
+  let minDistance = Infinity;
+
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.top);
+    if (distance < minDistance) {
+      minDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  selectedNavIndex = closestIndex;
+  selectNavItem(navItems[selectedNavIndex]);
+});
+
+//마우스 효과
+const cursor = document.querySelector('.mouse__effect');
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX + 10;
+  mouseY = e.clientY + 10;
+});
+
+function animate() {
+  currentX += (mouseX - currentX) * 0.5;
+  currentY += (mouseY - currentY) * 0.5;
+
+  cursor.style.left = `${currentX}px`;
+  cursor.style.top = `${currentY}px`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();

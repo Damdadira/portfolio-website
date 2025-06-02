@@ -46,6 +46,22 @@ body {
   cursor: default;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;   
+  height: 8px;  
+}
+
+body::-webkit-scrollbar-thumb { 
+  border-radius: 100px;
+  border: 1px solid var(--white-50, #F9FAFB);
+  opacity: 0.4;
+  background: var(--neutral-neutral-400, #414141);
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: var(--color-white);
@@ -942,6 +958,21 @@ p {
 .arrow-up.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Mouse */
+.mouse__effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: transform 0.1s linear;
+  z-index: 999;
+}
+
+.mouse__effect img {
+  width: 48px;
+  height: 48px;
 }
 
 /* For below 768px screen width */

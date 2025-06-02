@@ -11,10 +11,6 @@
     />
     <meta name="author" content="YA" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <script
-      src="https://kit.fontawesome.com/800bccca5a.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,6 +18,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/800bccca5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="main.js" defer></script>
   </head>
   <body>
@@ -513,16 +515,21 @@
           </div>
         </a>
       </div>
-      <p class="contact__rights">Copyright 2025. Damdadira All rights reserved.</p>
+      <p class="contact__rights">Copyright (c) Damdadira. All rights Reserved.</p>
     </section>
 
     <!-- Arrow up -->
-    <button class="arrow-up">
+    <button class="arrow-up visible">
       <svg class="svgIcon" viewBox="0 0 384 512">
         <path
           d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
         ></path>
       </svg>
     </button>
+
+    <!-- Mouse effect -->
+    <div class="mouse__effect">
+      <img src="/imgs/flower.png" alt="flower">
+    </div>
   </body>
 </html>
