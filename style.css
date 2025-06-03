@@ -44,6 +44,7 @@ body {
   font-family: 'Open Snas', sans-serif;
   margin: 0;
   cursor: default;
+  user-select: none;
 }
 
 body::-webkit-scrollbar {
@@ -1051,10 +1052,15 @@ p {
     height: 120px;
   }
 
-  .testimonial__avator:nth-child(even),
+
   .testimonial__avator:nth-child(odd) {
     margin: 0;
     margin-bottom: 25px;
+  }
+
+  .testimonial__avator:nth-child(even) {
+    margin: 0;
+    margin-top: 25px;
   }
 
   .testimonial__speech-bublle {
