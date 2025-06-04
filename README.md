@@ -59,7 +59,7 @@
  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javaScript&logoColor=white">&nbsp;
  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white">&nbsp;
  <img src="https://img.shields.io/badge/CSS-1373D4?&style=flat-square&logo=css3&logoColor=white">&nbsp;
- <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=flat-square&logo=vercel&logoColor=white">
+ <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=flat-square&logo=vercel&logoColor=white">
 </div>
 
 <br/>
