@@ -93,7 +93,6 @@ filterTabs.forEach(tab => {
 
 // 1. 모든 섹션 요소들과 메뉴아이템들을 가지고 온다
 const sectionIds = [
-  //우리가 사용하는 모든 아이디를 배열로(문자열로) 저장
   '#home',
   '#about',
   '#skills',
@@ -207,3 +206,27 @@ function animate() {
 }
 
 animate();
+
+// 스크롤 할때 section 올라오는 효과
+gsap.registerPlugin(ScrollTrigger);
+
+const scrollIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#work',
+  '#testimonials',
+];
+scrollIds.forEach((section) => {
+  gsap.from(section, {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top 80%', 
+      toggleActions: 'play none none none', 
+    },
+  });
+});
