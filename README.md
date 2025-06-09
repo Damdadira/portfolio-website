@@ -55,13 +55,16 @@
 <br/>
 
 ## 🛠 기술 스택
+#### 🕹 프론트엔드
 <div>
  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javaScript&logoColor=white">&nbsp;
  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white">&nbsp;
  <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white">&nbsp;
- <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=flat-square&logo=vercel&logoColor=white">
 </div>
+<br/>
 
+#### 🚀 배포 도구
+<img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=flat-square&logo=vercel&logoColor=white">
 <br/>
 
 ## 📍 홈페이지 주소
