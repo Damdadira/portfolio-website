@@ -381,7 +381,6 @@ p {
 
 .skillset {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 40px;
   margin: 40px 0;
 }
@@ -1030,11 +1029,7 @@ p {
   }
 
   .skillset {
-    flex-direction: column;
-  }
-
-  .skillset__card {
-    padding: 30px 25px;
+    gap: 20px;
   }
 
   .testimonial {
