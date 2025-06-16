@@ -381,6 +381,7 @@ p {
 
 .skillset {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 40px;
   margin: 40px 0;
 }
@@ -1029,6 +1030,7 @@ p {
   }
 
   .skillset {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
 
