@@ -1033,13 +1033,8 @@ p {
     flex-direction: column;
   }
 
-  .category__btn {
-    margin: 4px;
-    width: 100%;
-  }
-
-  .project {
-    flex-grow: 1;
+  .skillset__card {
+    padding: 30px 25px;
   }
 
   .testimonial {
@@ -1052,7 +1047,6 @@ p {
     height: 120px;
   }
 
-
   .testimonial__avator:nth-child(odd) {
     margin: 0;
     margin-bottom: 25px;
@@ -1061,10 +1055,6 @@ p {
   .testimonial__avator:nth-child(even) {
     margin: 0;
     margin-top: 25px;
-  }
-
-  .testimonial__speech-bublle {
-    order: 1;
   }
 
   .arrow-up {
