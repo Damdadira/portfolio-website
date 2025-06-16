@@ -1034,6 +1034,14 @@ p {
     gap: 20px;
   }
 
+  .filter__tabs {
+    gap: 10px;
+  }
+
+  .filter__tab {
+    padding: 10px 15px;
+  }
+
   .testimonial {
     flex-direction: column;
     align-items: center;
@@ -1052,6 +1060,10 @@ p {
   .testimonial__avator:nth-child(even) {
     margin: 0;
     margin-top: 25px;
+  }
+
+  .social__login-icons {
+    gap: 1.5rem;
   }
 
   .arrow-up {
