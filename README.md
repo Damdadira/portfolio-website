@@ -3,7 +3,7 @@
  <img src="/imgs/portfolio/img_full.png" width="100%"/>
 <br/>
 
-## 💡 화면 구성
+## 🖥 화면 구성
 <details>
  <summary><h3 style="display:inline; margin-left:4px">1️⃣ Home</h3></summary>
  <h4>📷 이미지</h4>
