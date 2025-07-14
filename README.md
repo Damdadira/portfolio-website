@@ -29,7 +29,7 @@
 </details>
 
 <details>
- <summary><h3 style="display:inline; margin-left:4px">4️⃣ My Work(Mock Data)</h3></summary>
+ <summary><h3 style="display:inline; margin-left:4px">4️⃣ My Work</h3></summary>
  <h4>📷 이미지</h4>
  <img src="/imgs/portfolio/img_mywork.png" />
  <h4>📽 동영상</h4>
@@ -37,7 +37,7 @@
 </details>
 
 <details>
- <summary><h3 style="display:inline; margin-left:4px">5️⃣ Testimonials(Mock Data)</h3></summary>
+ <summary><h3 style="display:inline; margin-left:4px">5️⃣ Testimonials</h3></summary>
  <h4>📷 이미지</h4>
  <img src="/imgs/portfolio/img_testimonials.png" />
  <h4>📽 동영상</h4>
